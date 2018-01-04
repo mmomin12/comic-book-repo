@@ -8,5 +8,10 @@ namespace ComincBook.Controllers
 {
     public class ComicBookController : Controller
     {
+
+        public ActionResult Detail()
+        {
+            return View();
+        }
     }
 }
