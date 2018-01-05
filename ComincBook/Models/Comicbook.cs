@@ -14,5 +14,21 @@ namespace ComincBook.Models
         public Artist[] Artists { get; set; }
         public bool Favorite { get; set; }
 
+        public string DisplayText
+        {
+            get
+            {
+                return SeriesTitle + " #" + IssueNumber;
+            }
+        }
+
+        public string CoverImageTitleName
+        {
+            get
+            {
+                return SeriesTitle.Replace(" ", "-")
+                    .ToLower() + "-" + IssueNumber + ".jpg";
+            }
+        }
     }
 }
